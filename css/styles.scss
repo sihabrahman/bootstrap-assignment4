@@ -1,76 +1,95 @@
 $lt-gray: #ddd;
-$bg-dark: #512DA8;
-$bg-light: #9575CD;
-$bg-pale: #D1C4E9;
+$bg-dark: #512da8;
+$bg-light: #9575cd;
+$bg-pale: #d1c4e9;
 
 // Height variables
 $carousel-item-height: 300px;
 
-@mixin zero-margin ($pad-up-dn, $pad-left-right) {
-    margin: 0px auto;
-    padding: $pad-up-dn $pad-left-right;
+@mixin zero-margin($pad-up-dn, $pad-left-right) {
+  margin: 0px auto;
+  padding: $pad-up-dn $pad-left-right;
 }
 
-.row-header{
-    @include zero-margin(0px,0px);
+.row-header {
+  @include zero-margin(0px, 0px);
 }
 
 .row-content {
-    @include zero-margin(50px,0px);
-    border-bottom: 1px ridge;
-    min-height:400px;
+  @include zero-margin(50px, 0px);
+  border-bottom: 1px ridge;
+  min-height: 400px;
 }
 
-.footer{
-    background-color: $bg-pale;
-    @include zero-margin(20px, 0px);
+.footer {
+  background-color: $bg-pale;
+  @include zero-margin(20px, 0px);
 }
 
 .jumbotron {
-    @include zero-margin(70px,30px);
-    background: $bg-light ;
-    color:floralwhite;
+  @include zero-margin(70px, 30px);
+  background: $bg-light;
+  h1 {
+    color: floralwhite;
+  }
+  p {
+    color: floralwhite;
+  }
 }
 
-address{
-    font-size:80%;
-    margin:0px;
-    color:#0f0f0f;
+address {
+  font-size: 80%;
+  margin: 0px;
+  color: #0f0f0f;
 }
 
-body{
-    padding:50px 0px 0px 0px;
-    z-index:0;
+body {
+  padding: 50px 0px 0px 0px;
+  z-index: 0;
 }
 
 .navbar-dark {
-     background-color: $bg-dark;
+  background-color: $bg-dark;
 }
 
 .tab-content {
-    border-left: 1px solid $lt-gray;
-    border-right: 1px solid $lt-gray;
-    border-bottom: 1px solid $lt-gray;
-    padding: 10px;
+  border-left: 1px solid $lt-gray;
+  border-right: 1px solid $lt-gray;
+  border-bottom: 1px solid $lt-gray;
+  padding: 10px;
 }
 
 .carousel {
-    background: $bg-dark;
+  background: $bg-dark;
 
-    .carousel-item{
-        height: $carousel-item-height;
-        img{
-            position: absolute;
-            top: 0;
-            left: 0;
-            min-height: 300px;
-        }
+  .carousel-item {
+    height: $carousel-item-height;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 300px;
     }
+  }
 }
 
 #carouselButton {
-    right:0px;
-    position: absolute;
-    bottom: 0px;
-    z-index: 2;
+  right: 0px;
+  position: absolute;
+  bottom: 0px;
+  z-index: 2;
+}
+
+.modal-header {
+  background: $bg-dark;
+  .modal-title {
+    color: floralwhite;
+  }
+  .close {
+    color: floralwhite;
+  }
+}
+
+.modal-body {
+  background: $bg-pale;
 }
